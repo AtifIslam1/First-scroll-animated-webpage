@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section class="main">
+        <img src="images/stars.png" id="stars">
+        <img src="images/moon.png" id="moon">
+        <img src="images/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Atif's Best so far</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="images/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Made by using pure css</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eveniet ab ullam neque quia amet facilis repellat qui nostrum sit quibusdam enim consequuntur obcaecati reiciendis officia, sequi provident, deserunt aut quam, ipsum nihil maxime a fugit. Vero, aperiam laudantium assumenda at soluta enim temporibus cumque? Nesciunt, non voluptatum expedita quas <br><br> ipsa fuga corrupti blanditiis enim dignissimos voluptatem ducimus consectetur? Tempora natus animi autem dignissimos nam soluta amet? Atque possimus, architecto corrupti iste, alias commodi magnam perferendis cum inventore aut culpa impedit sapiente nesciunt aliquid itaque iure? Iure necessitatibus iusto modi atque amet corrupti rerum laudantium suscipit fugit tenetur, doloribus ipsa commodi explicabo odit corporis debitis sint a molestiae veritatis animi omnis. Voluptates, cumque. Consequuntur distinctio possimus inventore doloremque officiis <br> atque perspiciatis sapiente facilis fuga deleniti dolores repudiandae, blanditiis ut impedit. Commodi consequatur quam consectetur aspernatur, quis magnam cupiditate? Vero nobis fuga quo aliquam explicabo rerum! Quos laudantium praesentium, impedit, culpa amet quaerat velit esse voluptatem fuga eaque neque illo repellat atque cumque corporis aspernatur provident obcaecati voluptatum ab perspiciatis! Molestiae commodi pariatur placeat vitae quas eaque, labore aliquam laborum, expedita consectetur ratione nemo error, explicabo facere ipsa <br><br> voluptates vero. Facere nostrum voluptates, voluptate consequuntur, culpa minima laborum esse ullam fugiat temporibus aliquam ipsam perspiciatis deleniti, aut vel distinctio impedit ab harum! Voluptatum, asperiores. Veritatis eveniet voluptas laboriosam eum deserunt <br>  facilis accusamus, nostrum similique quasi quis ipsa repudiandae corrupti natus, cupiditate tempore voluptatem dolor? Dignissimos eveniet ipsum aut repellat totam ab facere inventore voluptate nobis quia blanditiis a molestiae, praesentium porro consequatur hic possimus. Numquam, mollitia commodi architecto itaque nisi consectetur <br>  deleniti atque delectus quis nulla expedita, molestiae sed incidunt ipsam ipsa repellendus iusto maiores ex neque dolorem eum. Incidunt tempora autem illum et sunt consectetur asperiores, ullam mollitia, temporibus error rem vitae porro nostrum dolor culpa quam hic perferendis consequatur, dolore corrupti quisquam! Reprehenderit doloremque saepe tenetur facere sed necessitatibus magnam rem explicabo ab quibusdam maiores reiciendis quae delectus quia, sit ullam voluptatum assumenda modi unde tempora aliquid quisquam voluptatem, sunt cupiditate. Eligendi cum eos assumenda maiores corporis <br><br>quam qui ipsum minima. Soluta et exercitationem officia deserunt suscipit laborum, ducimus at velit necessitatibus rerum accusantium eveniet quo vero eligendi quia in doloremque corrupti sit quidem, ea repellendus! Maiores pariatur officia perferendis soluta tempore rem laboriosam porro. Quaerat repudiandae voluptate beatae, voluptates similique quibusdam nam odio architecto impedit repellat eum mollitia nisi unde dolores? Iste odio doloribus minima est laudantium sapiente.</p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 5 + 'px';
+            text.style.marginTop = value * 1.4 + 'px';
+            btn.style.marginTop = value * 1.4 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
